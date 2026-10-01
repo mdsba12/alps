@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-palette="prussian">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Angeline Lee Pei Shih — Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  NAVBAR — logo | links | dark toggle     ║
+     ╚══════════════════════════════════════════╝ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">Angeline<span class="accent">.</span></a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home"         class="nav-link active">Home</a></li>
+      <li><a href="#about"        class="nav-link">About</a></li>
+      <li><a href="#portfolio"    class="nav-link">Portfolio</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#clubs"        class="nav-link">Clubs</a></li>
+      <li><a href="#contact"      class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-end">
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-sun  icon-sun"></i>
+        <i class="fas fa-moon icon-moon"></i>
+        <span id="themeLabel">Light</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- scroll progress bar (top) -->
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  FLOATING PALETTE FAB — bottom-right     ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="pal-fab" id="fab">
+  <button class="fab-btn" id="fabBtn" aria-label="Change colour palette" aria-expanded="false">
+    <i class="fas fa-palette"></i>
+  </button>
+  <div class="fab-drawer" id="fabDrawer" aria-hidden="true">
+    <p class="fab-title">Choose Palette</p>
+    <div class="fab-list">
+      <button class="fab-item" data-palette="prussian">
+        <span class="swatch" style="background:linear-gradient(135deg,#023047,#ffb703)"></span>
+        <span class="swatch-name">Prussian</span>
+        <i class="fas fa-check fab-check"></i>
+      </button>
+      <button class="fab-item" data-palette="candy">
+        <span class="swatch" style="background:linear-gradient(135deg,#355070,#e56b6f)"></span>
+        <span class="swatch-name">Candy</span>
+        <i class="fas fa-check fab-check"></i>
+      </button>
+      <button class="fab-item" data-palette="cyber">
+        <span class="swatch" style="background:linear-gradient(135deg,#00296b,#fdc500)"></span>
+        <span class="swatch-name">Cyber</span>
+        <i class="fas fa-check fab-check"></i>
+      </button>
+      <button class="fab-item" data-palette="midnight">
+        <span class="swatch" style="background:linear-gradient(135deg,#084c61,#db3a34)"></span>
+        <span class="swatch-name">Midnight</span>
+        <i class="fas fa-check fab-check"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  SECTION 1 — HOME (summary)              ║
+     ╚══════════════════════════════════════════╝ -->
+<section id="home" class="hero">
+  <span class="hero-blob b1"></span>
+  <span class="hero-blob b2"></span>
+  <span class="hero-blob b3"></span>
+
+  <div class="hero-wrap">
+    <div class="hero-text reveal">
+      <p class="hi">Hello, I'm</p>
+      <h1>Angeline Lee<br><span class="accent-text">Pei Shih</span></h1>
+      <p class="hero-role">Bachelor of Electronic Engineering · UTM</p>
+      <p class="hero-bio">Award-winning student from Johor Bahru, Malaysia. Passionate about engineering, educational innovation, entrepreneurship, and meaningful community leadership.</p>
+
+      <div class="stat-row">
+        <div class="s-item"><span class="s-num">6<sup>+</sup></span><span class="s-lbl">Awards</span></div>
+        <div class="s-div"></div>
+        <div class="s-item"><span class="s-num">3<sup>+</sup></span><span class="s-lbl">Leadership Roles</span></div>
+        <div class="s-div"></div>
+        <div class="s-item"><span class="s-num">3</span><span class="s-lbl">Languages</span></div>
+      </div>
+
+      <p class="explore-lbl">Quick explore</p>
+      <div class="qnav">
+        <button class="qbtn" data-modal="m-about">       <i class="fas fa-user"></i>      About</button>
+        <button class="qbtn" data-modal="m-edu">         <i class="fas fa-graduation-cap"></i> Education</button>
+        <button class="qbtn" data-modal="m-skills">      <i class="fas fa-star"></i>      Skills</button>
+        <button class="qbtn" data-modal="m-proj1">       <i class="fas fa-gamepad"></i>   Projects</button>
+        <button class="qbtn" data-modal="m-clubs">       <i class="fas fa-bolt"></i>      Clubs</button>
+        <button class="qbtn" data-modal="m-contact">     <i class="fas fa-envelope"></i>  Contact</button>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/angeline-pei-shih-lee" target="_blank" rel="noopener noreferrer" class="si"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:angelineleepei@graduate.utm.my" class="si"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-img reveal delay-1">
+      <div class="ring"><div class="avatar"><i class="fas fa-user"></i></div></div>
+      <div class="badge b-a"><i class="fas fa-trophy"></i> Gold Medal</div>
+      <div class="badge b-b"><i class="fas fa-crown"></i> President</div>
+      <div class="badge b-c"><i class="fas fa-bolt"></i> Engineer</div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  SECTION 2 — ABOUT (cards → modals)     ║
+     ╚══════════════════════════════════════════╝ -->
+<section id="about" class="sec">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <h2 class="sec-title">About <span class="accent-text">Me</span></h2>
+      <p class="sec-sub">Click any card to read more</p>
+    </div>
+    <div class="cg3">
+      <div class="card reveal"           data-modal="m-about">
+        <div class="card-ico"><i class="fas fa-user-circle"></i></div>
+        <h3>Personal Profile</h3>
+        <p>My background, philosophy, interests, and what drives me.</p>
+        <span class="card-cta">Open <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal delay-1"   data-modal="m-edu">
+        <div class="card-ico"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Education</h3>
+        <p>UTM Electronic Engineering (2024–Present) and Matriculation College (2023–2024).</p>
+        <span class="card-cta">Open <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal delay-2"   data-modal="m-skills">
+        <div class="card-ico"><i class="fas fa-tools"></i></div>
+        <h3>Skills &amp; Software</h3>
+        <p>Languages, engineering software, and core competencies.</p>
+        <span class="card-cta">Open <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  SECTION 3 — PORTFOLIO (cards → modals) ║
+     ╚══════════════════════════════════════════╝ -->
+<section id="portfolio" class="sec alt">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <h2 class="sec-title">My <span class="accent-text">Portfolio</span></h2>
+      <p class="sec-sub">Projects, competitions &amp; leadership — click to expand</p>
+    </div>
+    <div class="cg4">
+      <div class="card reveal"           data-modal="m-proj1">
+        <div class="card-ico gold-ico"><i class="fas fa-gamepad"></i></div>
+        <span class="cbadge gold">Gold — PIITRAM 2024</span>
+        <h3>Social Entrepreneurship Game</h3>
+        <p>Educational game teaching social entrepreneurship. Led graphic design and concept development.</p>
+        <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal delay-1"   data-modal="m-proj2">
+        <div class="card-ico teal-ico"><i class="fas fa-heart"></i></div>
+        <span class="cbadge teal">UMHackathon 2025</span>
+        <h3>Charity Fintech Solution</h3>
+        <p>Designed Figma prototype; collaborated on pitch, demo, and fintech platform development.</p>
+        <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal delay-2"   data-modal="m-proj3">
+        <div class="card-ico purple-ico"><i class="fas fa-robot"></i></div>
+        <span class="cbadge purple">Finalist — Arc 2026</span>
+        <h3>Robosurvivor Challenge</h3>
+        <p>Robotics finalist — engineering problem-solving under pressure.</p>
+        <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal"           data-modal="m-leadership">
+        <div class="card-ico"><i class="fas fa-users"></i></div>
+        <h3>Leadership Roles</h3>
+        <p>Vice Chemistry PAL Head &amp; Co-curricular Secretary — 50+ students mentored.</p>
+        <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  SECTION 4 — ACHIEVEMENTS               ║
+     ╚══════════════════════════════════════════╝ -->
+<section id="achievements" class="sec">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <h2 class="sec-title">Achievements &amp; <span class="accent-text">Recognition</span></h2>
+      <p class="sec-sub">Click any award card for the full story</p>
+    </div>
+
+    <div class="ach-counts reveal">
+      <div class="ac"><div class="ac-ico gold"><i class="fas fa-trophy"></i></div><b>3</b><span>Gold Medals</span></div>
+      <div class="ac"><div class="ac-ico silver"><i class="fas fa-medal"></i></div><b>1</b><span>Silver Medal</span></div>
+      <div class="ac"><div class="ac-ico red"><i class="fas fa-crown"></i></div><b>1</b><span>Championship</span></div>
+      <div class="ac"><div class="ac-ico teal"><i class="fas fa-flag-checkered"></i></div><b>6+</b><span>Competitions</span></div>
+    </div>
+
+    <div class="cg3 mt2">
+      <div class="card reveal"         data-modal="m-ach-piitram">
+        <div class="card-ico gold-ico"><i class="fas fa-trophy"></i></div>
+        <span class="cbadge gold">Gold Medal</span>
+        <h3>PIITRAM 2024</h3>
+        <p>Pre-University Matriculation Innovation Competition — educational game design.</p>
+        <span class="card-cta">Full Story <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal delay-1" data-modal="m-ach-startup">
+        <div class="card-ico red-ico"><i class="fas fa-crown"></i></div>
+        <span class="cbadge champion">Champion</span>
+        <h3>Youth Startup Competition 2023</h3>
+        <p>Intervarsity Youth Startup Competition &amp; Summit — 1st place nationwide.</p>
+        <span class="card-cta">Full Story <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal delay-2" data-modal="m-ach-mte">
+        <div class="card-ico gold-ico"><i class="fas fa-award"></i></div>
+        <span class="cbadge gold">Gold Medal</span>
+        <h3>Malaysia Technology Expo 2022</h3>
+        <p>National-level gold for outstanding innovation and technical excellence.</p>
+        <span class="card-cta">Full Story <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal"         data-modal="m-ach-arc">
+        <div class="card-ico purple-ico"><i class="fas fa-robot"></i></div>
+        <span class="cbadge finalist">Finalist</span>
+        <h3>Arc: Robosurvivor 2026</h3>
+        <p>Robotics competition finalist.</p>
+        <span class="card-cta">Full Story <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal delay-1" data-modal="m-ach-hackathon">
+        <div class="card-ico teal-ico"><i class="fas fa-code"></i></div>
+        <span class="cbadge teal">Participant</span>
+        <h3>UMHackathon 2025</h3>
+        <p>Fintech for charity domain — Figma UI + pitch preparation.</p>
+        <span class="card-cta">Full Story <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal delay-2" data-modal="m-ach-hikmj">
+        <div class="card-ico silver-ico"><i class="fas fa-lightbulb"></i></div>
+        <span class="cbadge silver">Silver Medal</span>
+        <h3>HiKMJ 2023</h3>
+        <p>Hari Inovasi Kolej Matrikulasi Johor — creative innovation showcase.</p>
+        <span class="card-cta">Full Story <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+
+    <!-- timeline strip -->
+    <div class="tl-strip reveal mt2">
+      <h3>Timeline</h3>
+      <div class="tls">
+        <div class="tls-i"><span class="tls-yr">2022</span><span class="tls-dot gold-dot"></span><span class="tls-lbl">MTE — Gold</span></div>
+        <div class="tls-i"><span class="tls-yr">2022</span><span class="tls-dot red-dot"></span><span class="tls-lbl">Innovation Club VP</span></div>
+        <div class="tls-i"><span class="tls-yr">2023</span><span class="tls-dot red-dot"></span><span class="tls-lbl">Youth Startup — Champion</span></div>
+        <div class="tls-i"><span class="tls-yr">2023</span><span class="tls-dot silver-dot"></span><span class="tls-lbl">HiKMJ — Silver</span></div>
+        <div class="tls-i"><span class="tls-yr">2024</span><span class="tls-dot gold-dot"></span><span class="tls-lbl">PIITRAM — Gold</span></div>
+        <div class="tls-i"><span class="tls-yr">2025</span><span class="tls-dot teal-dot"></span><span class="tls-lbl">UMHackathon</span></div>
+        <div class="tls-i"><span class="tls-yr">2026</span><span class="tls-dot purple-dot"></span><span class="tls-lbl">Arc — Finalist</span></div>
+        <div class="tls-i"><span class="tls-yr">2026</span><span class="tls-dot gold-dot"></span><span class="tls-lbl">JURUTEK President</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  SECTION 5 — CLUBS & ORGANISATIONS      ║
+     ╚══════════════════════════════════════════╝ -->
+<section id="clubs" class="sec alt">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <h2 class="sec-title">Clubs &amp; <span class="accent-text">Organisations</span></h2>
+      <p class="sec-sub">Leadership, events, and community involvement — click for details</p>
+    </div>
+    <div class="cg3">
+      <div class="card card-featured reveal" data-modal="m-clubs">
+        <div class="card-ico" style="background:linear-gradient(135deg,#023047,#219ebc)"><i class="fas fa-bolt"></i></div>
+        <span class="cbadge gold">President · Sep 2026</span>
+        <h3>JURUTEK UTM</h3>
+        <p>Persatuan Pelajar Kejuruteraan Elektrik — President of UTM's Electrical Engineering student association.</p>
+        <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal delay-1"   data-modal="m-events">
+        <div class="card-ico"><i class="fas fa-calendar-check"></i></div>
+        <span class="cbadge teal">Event Director / Tech</span>
+        <h3>UTM Events 2026</h3>
+        <p>Director — Google Sheets Workshop &amp; Technical/Logistic for FKE Future Ready 2026.</p>
+        <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal delay-2"   data-modal="m-pal">
+        <div class="card-ico"><i class="fas fa-flask"></i></div>
+        <span class="cbadge teal-alt">Vice Head · 2023</span>
+        <h3>Chemistry PAL Programme</h3>
+        <p>Vice Head of Chemistry Peer-Assisted Learning — 50+ students, 15 sessions.</p>
+        <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+      </div>
+      <div class="card reveal"           data-modal="m-vp-innov">
+        <div class="card-ico red-ico"><i class="fas fa-lightbulb"></i></div>
+        <span class="cbadge red">Vice President · 2022</span>
+        <h3>Innovation Club</h3>
+        <p>Vice President of Innovation Club — 2022. Driving creativity and entrepreneurial culture.</p>
+        <span class="card-cta">View Details <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  SECTION 6 — CONTACT                    ║
+     ╚══════════════════════════════════════════╝ -->
+<section id="contact" class="sec">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <h2 class="sec-title">Let's <span class="accent-text">Connect</span></h2>
+      <p class="sec-sub">Have a project or opportunity? I'd love to hear from you!</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <h3>Get In Touch</h3>
+        <p>I'm always excited to connect with innovators, educators, and changemakers.</p>
+        <div class="cmethods">
+          <div class="citem highlight">
+            <div class="cico"><i class="fas fa-envelope"></i></div>
+            <div><h4>Email</h4><p>angelineleepei@graduate.utm.my</p><small>Best way to reach me</small></div>
+          </div>
+          <div class="citem">
+            <div class="cico"><i class="fas fa-phone"></i></div>
+            <div><h4>Phone</h4><p>+6017-501 7013</p><small>Business hours</small></div>
+          </div>
+          <div class="citem">
+            <div class="cico"><i class="fas fa-map-marker-alt"></i></div>
+            <div><h4>Location</h4><p>Johor Bahru, Johor, Malaysia</p></div>
+          </div>
+        </div>
+        <div class="csoc-wrap">
+          <h4>Follow Me</h4>
+          <div class="csoc">
+            <a href="https://www.linkedin.com/in/angeline-pei-shih-lee" target="_blank" rel="noopener noreferrer" class="csoc-btn li"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right reveal delay-1">
+        <h3>Send a Message</h3>
+        <p>I'll get back to you within 24 hours.</p>
+        <form id="contactForm" novalidate>
+          <div class="frow">
+            <div class="fg"><label>First Name</label><input type="text" name="fName" placeholder="Angeline" required></div>
+            <div class="fg"><label>Last Name</label><input type="text" name="lName" placeholder="Lee" required></div>
+          </div>
+          <div class="fg"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+          <div class="fg">
+            <label>Subject</label>
+            <select name="subject" required>
+              <option value="">Select…</option>
+              <option>Collaboration</option><option>Project</option>
+              <option>Mentorship</option><option>Speaking</option><option>Other</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Message</label>
+            <textarea name="message" id="cmsg" rows="5" required placeholder="Tell me about your idea…"></textarea>
+            <span class="ccount" id="ccount">0 / 500</span>
+          </div>
+          <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <p class="fnote"><i class="fas fa-shield-alt"></i> Your information stays private.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-top">
+      <div>
+        <p class="foot-logo">Angeline<span class="accent">.</span></p>
+        <p class="foot-sub">Bachelor of Electronic Engineering · UTM</p>
+      </div>
+      <nav class="foot-nav">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#portfolio">Portfolio</a>
+        <a href="#achievements">Achievements</a><a href="#clubs">Clubs</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="foot-soc">
+        <a href="https://www.linkedin.com/in/angeline-pei-shih-lee" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:angelineleepei@graduate.utm.my"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <p class="foot-copy" id="footCopy">&copy; 2026 Angeline Lee Pei Shih. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  MODAL OVERLAY                           ║
+     ╚══════════════════════════════════════════╝ -->
+<div class="overlay" id="overlay" aria-hidden="true">
+  <div class="mbox" id="mbox" role="dialog" aria-modal="true">
+    <button class="mclose" id="mclose" aria-label="Close"><i class="fas fa-times"></i></button>
+    <div id="mcontent"></div>
+  </div>
+</div>
+
+<!-- ╔══════════════════════════════════════════╗
+     ║  MODAL TEMPLATES (hidden)                ║
+     ╚══════════════════════════════════════════╝ -->
+<div id="mtpls" hidden>
+
+  <!-- ── ABOUT ── -->
+  <div id="m-about">
+    <div class="mh"><div class="mhico"><i class="fas fa-user-circle"></i></div><div><h2>About Angeline</h2><p>Personal Profile</p></div></div>
+    <p>I'm Angeline Lee Pei Shih — a 2nd-year Electronic Engineering student at Universiti Teknologi Malaysia (UTM), from Johor Bahru, Malaysia. My curiosity about science and technology evolved into a passion for engineering, innovation, and meaningful community leadership.</p>
+    <p class="mt1">I thrive at the intersection of creativity and rigorous thinking — designing educational tools, leading student societies, or competing on national platforms.</p>
+    <blockquote class="mquote"><i class="fas fa-quote-left"></i> "Innovation thrives at the intersection of scientific knowledge and creative problem-solving. Every challenge is an opportunity."</blockquote>
+    <h4 class="msub">Areas of Interest</h4>
+    <div class="mtags">
+      <span><i class="fas fa-microchip"></i> Electronic Engineering</span>
+      <span><i class="fas fa-lightbulb"></i> Educational Innovation</span>
+      <span><i class="fas fa-rocket"></i> Entrepreneurship</span>
+      <span><i class="fas fa-gamepad"></i> Game Development</span>
+      <span><i class="fas fa-users"></i> Community Leadership</span>
+      <span><i class="fas fa-globe-asia"></i> Social Impact</span>
+    </div>
+    <h4 class="msub">Personal Details</h4>
+    <ul class="minfo">
+      <li><span>Full Name</span><span>Angeline Lee Pei Shih</span></li>
+      <li><span>Location</span><span>Johor Bahru, Malaysia</span></li>
+      <li><span>Current Study</span><span>2nd Year Electronic Engineering, UTM</span></li>
+      <li><span>Phone</span><span>+6017-501 7013</span></li>
+      <li><span>Email</span><span>angelineleepei@graduate.utm.my</span></li>
+    </ul>
+  </div>
+
+  <!-- ── EDUCATION ── -->
+  <div id="m-edu">
+    <div class="mh"><div class="mhico"><i class="fas fa-graduation-cap"></i></div><div><h2>Education</h2><p>Academic Journey</p></div></div>
+    <div class="mtl">
+      <div class="mtl-item current">
+        <div class="mtl-dot"></div>
+        <div class="mtl-body">
+          <span class="mtl-date">2024 – Present</span>
+          <h4>Universiti Teknologi Malaysia (UTM)</h4>
+          <p class="mtl-role">Bachelor of Electronic Engineering with Honours (SKELH)</p>
+          <p>Currently a 2nd year student at one of Malaysia's leading research universities. Actively involved in engineering clubs, student leadership, and national-level competitions alongside academic studies.</p>
+          <div class="mtags mt1">
+            <span>UTM Johor Bahru</span><span>Electronic Engineering</span><span>SKELH</span>
+          </div>
+        </div>
+      </div>
+      <div class="mtl-item">
+        <div class="mtl-dot"></div>
+        <div class="mtl-body">
+          <span class="mtl-date">2023 – 2024</span>
+          <h4>Negeri Sembilan Matriculation College</h4>
+          <p class="mtl-role">Life Sciences Programme</p>
+          <p>Completed a comprehensive matriculation programme building a strong foundation in biology, chemistry, physics, and mathematics. Developed research methodologies and analytical thinking skills central to scientific inquiry.</p>
+          <div class="mtags mt1">
+            <span>Biology</span><span>Chemistry</span><span>Physics</span><span>Mathematics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SKILLS ── -->
+  <div id="m-skills">
+    <div class="mh"><div class="mhico"><i class="fas fa-tools"></i></div><div><h2>Skills &amp; Software</h2><p>Languages, Tools &amp; Competencies</p></div></div>
+    <h4 class="msub">Languages</h4>
+    <div class="mbars">
+      <div class="mbar-item"><div class="mbar-hd"><span>English</span><span>Highly Proficient</span></div><div class="mbar-track"><div class="mbar-fill" data-w="95"></div></div></div>
+      <div class="mbar-item"><div class="mbar-hd"><span>Mandarin</span><span>Intermediate</span></div><div class="mbar-track"><div class="mbar-fill" data-w="70"></div></div></div>
+      <div class="mbar-item"><div class="mbar-hd"><span>Malay</span><span>Intermediate</span></div><div class="mbar-track"><div class="mbar-fill" data-w="75"></div></div></div>
+    </div>
+    <h4 class="msub">Engineering Software</h4>
+    <div class="mtags">
+      <span><i class="fas fa-microchip"></i> STM32CubeIDE &amp; STM32CubeProgrammer</span>
+      <span><i class="fas fa-wave-square"></i> Matlab</span>
+      <span><i class="fas fa-code"></i> Arduino IDE</span>
+      <span><i class="fas fa-bolt"></i> LTSpice</span>
+    </div>
+    <h4 class="msub">Design &amp; Productivity</h4>
+    <div class="mtags">
+      <span><i class="fas fa-pen-nib"></i> Figma</span>
+      <span><i class="fas fa-palette"></i> Canva</span>
+      <span><i class="fas fa-video"></i> CapCut</span>
+      <span><i class="fas fa-file-word"></i> Microsoft Word / Google Docs</span>
+      <span><i class="fas fa-file-excel"></i> Microsoft Excel / Google Sheets</span>
+      <span><i class="fas fa-file-powerpoint"></i> PowerPoint / Google Slides</span>
+    </div>
+    <h4 class="msub">Core Competencies</h4>
+    <div class="mtags">
+      <span>Creative Problem Solving</span><span>Team Leadership</span>
+      <span>Project Management</span><span>Graphic Design</span>
+      <span>Research &amp; Analysis</span><span>Public Speaking</span>
+      <span>Event Organisation</span><span>UI/UX Design</span>
+    </div>
+  </div>
+
+  <!-- ── PROJECT 1 ── -->
+  <div id="m-proj1">
+    <div class="mh"><div class="mhico gold-ico"><i class="fas fa-gamepad"></i></div><div><h2>Social Entrepreneurship Educational Game</h2><p>PIITRAM 2024 — Gold Medal</p></div></div>
+    <div class="mresult gold-r"><i class="fas fa-trophy"></i> Gold Medal — PIITRAM 2024</div>
+    <p>Developed an interactive educational game designed to teach players how to set up their own personal business as a social entrepreneur. The game bridges entrepreneurial education with engaging game mechanics.</p>
+    <h4 class="msub">My Contributions</h4>
+    <ul class="mlist">
+      <li><i class="fas fa-check-circle"></i> Contributed as the game <strong>graphic designer</strong></li>
+      <li><i class="fas fa-check-circle"></i> Designed the game layout, background scenes and button positioning</li>
+      <li><i class="fas fa-check-circle"></i> Developed game concept, storyline and objectives with team members</li>
+    </ul>
+    <div class="mtags mt1"><span>Game Design</span><span>UI/UX</span><span>Graphic Design</span><span>Educational Tech</span></div>
+  </div>
+
+  <!-- ── PROJECT 2 ── -->
+  <div id="m-proj2">
+    <div class="mh"><div class="mhico teal-ico"><i class="fas fa-heart"></i></div><div><h2>Charity &amp; Donations Fintech Solution</h2><p>UMHackathon 2025 — Participant</p></div></div>
+    <p>Participated in UMHackathon 2025 — Domain: Enhancing Charity &amp; Donations through Fintech. Worked with a team of 4 members to develop innovative fintech solutions improving transparency and accessibility for charitable giving.</p>
+    <h4 class="msub">My Contributions</h4>
+    <ul class="mlist">
+      <li><i class="fas fa-check-circle"></i> Collaborated with 4 members to develop fintech solutions</li>
+      <li><i class="fas fa-check-circle"></i> Designed one-third of the <strong>user interface prototype using Figma</strong></li>
+      <li><i class="fas fa-check-circle"></i> Structured key information for the pitch and demo session</li>
+      <li><i class="fas fa-check-circle"></i> Conducted final functionality checks and ensured smooth system performance before submission</li>
+    </ul>
+    <div class="mtags mt1"><span>Figma</span><span>Fintech</span><span>UI Design</span><span>Pitch &amp; Demo</span><span>Social Impact</span></div>
+  </div>
+
+  <!-- ── PROJECT 3 ── -->
+  <div id="m-proj3">
+    <div class="mh"><div class="mhico purple-ico"><i class="fas fa-robot"></i></div><div><h2>Robosurvivor Challenge</h2><p>Arc Competition 2026 — Finalist</p></div></div>
+    <div class="mresult purple-r"><i class="fas fa-robot"></i> Finalist — Arc: Robosurvivor 2026</div>
+    <p>Advanced to the finals of Arc: Robosurvivor 2026, a robotics and survival-themed engineering challenge designed to test creative problem-solving and technical innovation under pressure.</p>
+    <h4 class="msub">Highlights</h4>
+    <ul class="mlist">
+      <li><i class="fas fa-check-circle"></i> Reached finalist stage in competitive national pool</li>
+      <li><i class="fas fa-check-circle"></i> Demonstrated engineering and robotics innovation</li>
+      <li><i class="fas fa-check-circle"></i> Applied skills from Electronic Engineering studies</li>
+    </ul>
+    <div class="mtags mt1"><span>Robotics</span><span>Engineering</span><span>Problem Solving</span></div>
+  </div>
+
+  <!-- ── LEADERSHIP ── -->
+  <div id="m-leadership">
+    <div class="mh"><div class="mhico"><i class="fas fa-users"></i></div><div><h2>Leadership Roles</h2><p>Mentoring &amp; Community Impact</p></div></div>
+    <div class="mtl">
+      <div class="mtl-item">
+        <div class="mtl-dot"></div>
+        <div class="mtl-body">
+          <span class="mtl-date">2023</span>
+          <h4>Vice Chemistry PAL Head</h4>
+          <p class="mtl-role">Negeri Sembilan Matriculation College</p>
+          <p>Spearheaded peer-assisted learning for chemistry students. Organised weekly study sessions, developed learning materials, and provided one-on-one academic support to over 50 students.</p>
+          <div class="mstats">
+            <div class="mstat"><b>50+</b><span>Students Mentored</span></div>
+            <div class="mstat"><b>15+</b><span>Study Sessions</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="mtl-item">
+        <div class="mtl-dot"></div>
+        <div class="mtl-body">
+          <span class="mtl-date">2023</span>
+          <h4>Secretary — Co-curricular Final Project</h4>
+          <p class="mtl-role">Negeri Sembilan Matriculation College</p>
+          <p>Coordinated and managed a comprehensive final project for co-curricular activities. Ensured seamless execution through planning, documentation, and stakeholder communication — delivered on time and within scope.</p>
+          <div class="mtags mt1"><span>Project Management</span><span>Documentation</span><span>Coordination</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CLUBS: JURUTEK ── -->
+  <div id="m-clubs">
+    <div class="mh"><div class="mhico" style="background:linear-gradient(135deg,#023047,#219ebc)"><i class="fas fa-bolt"></i></div><div><h2>JURUTEK UTM</h2><p>Persatuan Pelajar Kejuruteraan Elektrik · President</p></div></div>
+    <div class="mhighlight">
+      <i class="fas fa-crown"></i>
+      <div><strong>President</strong><span>Appointed September 2026</span></div>
+    </div>
+    <p>Elected as President of <strong>JURUTEK UTM</strong> (Persatuan Pelajar Kejuruteraan Elektrik) — the official Electrical Engineering student association of Universiti Teknologi Malaysia (UTM). One of the most active faculty-level student organisations at UTM.</p>
+    <h4 class="msub">Responsibilities</h4>
+    <ul class="mlist">
+      <li><i class="fas fa-check-circle"></i> Lead and represent the electrical engineering student body at UTM</li>
+      <li><i class="fas fa-check-circle"></i> Plan and oversee technical workshops, seminars, and industry events</li>
+      <li><i class="fas fa-check-circle"></i> Foster collaboration between students, faculty, and industry partners</li>
+      <li><i class="fas fa-check-circle"></i> Manage the association's committees and administrative operations</li>
+      <li><i class="fas fa-check-circle"></i> Represent students in university-level academic and welfare discussions</li>
+    </ul>
+    <div class="mtags mt1"><span>Universiti Teknologi Malaysia</span><span>Electrical Engineering</span><span>Student Leadership</span><span>Event Management</span></div>
+  </div>
+
+  <!-- ── UTM EVENTS ── -->
+  <div id="m-events">
+    <div class="mh"><div class="mhico"><i class="fas fa-calendar-check"></i></div><div><h2>UTM Events 2026</h2><p>Director &amp; Technical/Logistics</p></div></div>
+
+    <div class="mtl">
+      <div class="mtl-item">
+        <div class="mtl-dot"></div>
+        <div class="mtl-body">
+          <span class="mtl-date">2026</span>
+          <h4>Director — Automate &amp; Analyze: Google Sheets Workshop</h4>
+          <p class="mtl-role">JURUTEK UTM · Faculty of Electrical Engineering, UTM</p>
+          <p>Directed a technical workshop attended by 90 students from FKE and other faculties. Responsible for full event coordination from planning through execution.</p>
+          <h4 class="msub" style="font-size:.88rem;margin-top:.75rem">Key Actions</h4>
+          <ul class="mlist">
+            <li><i class="fas fa-check-circle"></i> Organised detailed task distribution for 4 departments</li>
+            <li><i class="fas fa-check-circle"></i> Conducted event flow briefing for 14 committee members</li>
+            <li><i class="fas fa-check-circle"></i> Reviewed multimedia and publicity deliverables</li>
+            <li><i class="fas fa-check-circle"></i> Ensured timely completion of all tasks</li>
+            <li><i class="fas fa-check-circle"></i> Workshop attended by 90 students from FKE and other faculties</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mtl-item">
+        <div class="mtl-dot"></div>
+        <div class="mtl-body">
+          <span class="mtl-date">2026</span>
+          <h4>Technical &amp; Logistic — FKE Future Ready: Talk. Pitch. Compete.</h4>
+          <p class="mtl-role">Faculty of Electrical Engineering, UTM</p>
+          <ul class="mlist" style="margin-top:.5rem">
+            <li><i class="fas fa-check-circle"></i> Assisted with room and equipment reservations</li>
+            <li><i class="fas fa-check-circle"></i> Liaison between organising team and facility coordinator</li>
+            <li><i class="fas fa-check-circle"></i> Tracked department tasks and updates during meetings</li>
+            <li><i class="fas fa-check-circle"></i> Ensured proper return of 6 equipment items and venue maintenance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mtags mt1"><span>Event Management</span><span>Logistics</span><span>Technical Support</span><span>UTM FKE</span></div>
+  </div>
+
+  <!-- ── PAL ── -->
+  <div id="m-pal">
+    <div class="mh"><div class="mhico"><i class="fas fa-flask"></i></div><div><h2>Chemistry PAL Programme</h2><p>Vice Head · Matriculation 2023</p></div></div>
+    <p>Served as Vice Head of the Chemistry Peer-Assisted Learning (PAL) Programme at Negeri Sembilan Matriculation College. Led efforts to improve student understanding and performance in chemistry through structured peer learning.</p>
+    <ul class="mlist mt1">
+      <li><i class="fas fa-check-circle"></i> Organised and facilitated weekly chemistry study sessions</li>
+      <li><i class="fas fa-check-circle"></i> Developed study guides and learning materials for peers</li>
+      <li><i class="fas fa-check-circle"></i> Provided one-on-one mentoring to struggling students</li>
+      <li><i class="fas fa-check-circle"></i> Coordinated with lecturers to align PAL sessions with curriculum</li>
+    </ul>
+    <div class="mstats mt1">
+      <div class="mstat"><b>50+</b><span>Students Helped</span></div>
+      <div class="mstat"><b>15+</b><span>Sessions Run</span></div>
+    </div>
+  </div>
+
+  <!-- ── VP INNOVATION CLUB ── -->
+  <div id="m-vp-innov">
+    <div class="mh"><div class="mhico red-ico"><i class="fas fa-lightbulb"></i></div><div><h2>Innovation Club</h2><p>Vice President · 2022</p></div></div>
+    <div class="mresult red-r"><i class="fas fa-lightbulb"></i> Vice President — 2022</div>
+    <p>Served as Vice President of the Innovation Club in 2022, driving creative and entrepreneurial culture among members. Played a key role in organising innovation-focused events and fostering a spirit of problem-solving.</p>
+    <div class="mtags mt1"><span>Innovation</span><span>Leadership</span><span>Entrepreneurship</span><span>Event Organisation</span></div>
+  </div>
+
+  <!-- ── ACHIEVEMENT MODALS ── -->
+  <div id="m-ach-piitram">
+    <div class="mh"><div class="mhico gold-ico"><i class="fas fa-trophy"></i></div><div><h2>PIITRAM 2024</h2><p>Pre-University Matriculation Innovation Competition</p></div></div>
+    <div class="mresult gold-r"><i class="fas fa-trophy"></i> Gold Medal Winner</div>
+    <p>Led a team to develop an educational game on social entrepreneurship. As the graphic designer, created comprehensive visual elements — game layouts, background scenes, and button UI.</p>
+    <ul class="mlist mt1">
+      <li><i class="fas fa-check-circle"></i> Created an educational game to teach players how to set up their own personal business as a social entrepreneur</li>
+      <li><i class="fas fa-check-circle"></i> Contributed as the game graphic designer — designed layout, backgrounds &amp; button positioning</li>
+      <li><i class="fas fa-check-circle"></i> Developed game concept, storyline, and objectives with team members</li>
+    </ul>
+    <div class="mtags mt1"><span>Innovation</span><span>Game Design</span><span>Graphic Design</span><span>Education</span></div>
+  </div>
+
+  <div id="m-ach-startup">
+    <div class="mh"><div class="mhico red-ico"><i class="fas fa-crown"></i></div><div><h2>Intervarsity Youth Startup Competition &amp; Summit</h2><p>Champion · 2023</p></div></div>
+    <div class="mresult red-r"><i class="fas fa-crown"></i> Champion — First Place Nationwide</div>
+    <p>Secured first place in this prestigious startup competition among university-level participants across Malaysia. Demonstrated exceptional entrepreneurial vision, business acumen, and innovative thinking.</p>
+    <div class="mtags mt1"><span>Startup</span><span>Entrepreneurship</span><span>Business Strategy</span><span>Presentation</span></div>
+  </div>
+
+  <div id="m-ach-mte">
+    <div class="mh"><div class="mhico gold-ico"><i class="fas fa-award"></i></div><div><h2>Malaysia Technology Expo (MTE)</h2><p>Gold Medal · 2022</p></div></div>
+    <div class="mresult gold-r"><i class="fas fa-trophy"></i> Gold Medal — National Level</div>
+    <p>Achieved gold recognition at Malaysia's premier technology exhibition for outstanding innovation and technical excellence, competing against entries from across the country.</p>
+    <div class="mtags mt1"><span>National Level</span><span>Technology</span><span>Innovation</span><span>Research</span></div>
+  </div>
+
+  <div id="m-ach-arc">
+    <div class="mh"><div class="mhico purple-ico"><i class="fas fa-robot"></i></div><div><h2>Arc: Robosurvivor</h2><p>Finalist · 2026</p></div></div>
+    <div class="mresult purple-r"><i class="fas fa-robot"></i> Finalist</div>
+    <p>Advanced to the finals of Arc: Robosurvivor, a robotics-themed competition testing engineering ingenuity and problem-solving under pressure. Applied Electronic Engineering skills from UTM studies.</p>
+    <div class="mtags mt1"><span>Robotics</span><span>Engineering</span><span>Problem Solving</span></div>
+  </div>
+
+  <div id="m-ach-hackathon">
+    <div class="mh"><div class="mhico teal-ico"><i class="fas fa-code"></i></div><div><h2>UMHackathon 2025</h2><p>Participant · Fintech Domain</p></div></div>
+    <p>Participated in UMHackathon 2025 — Domain: <em>"Enhancing Charity &amp; Donations through Fintech."</em></p>
+    <ul class="mlist mt1">
+      <li><i class="fas fa-check-circle"></i> Collaborated with 4 members to develop fintech solutions</li>
+      <li><i class="fas fa-check-circle"></i> Designed one-third of the user interface prototype using Figma</li>
+      <li><i class="fas fa-check-circle"></i> Structured key information for the pitch and demo session</li>
+      <li><i class="fas fa-check-circle"></i> Conducted final functionality checks before submission</li>
+    </ul>
+    <div class="mtags mt1"><span>Figma</span><span>Fintech</span><span>Social Impact</span><span>Hackathon</span></div>
+  </div>
+
+  <div id="m-ach-hikmj">
+    <div class="mh"><div class="mhico silver-ico"><i class="fas fa-lightbulb"></i></div><div><h2>Hari Inovasi KMJ (HiKMJ)</h2><p>Silver Medal · 2023</p></div></div>
+    <div class="mresult silver-r"><i class="fas fa-medal"></i> Silver Medal</div>
+    <p>Recognised for creative and innovative project work during Kolej Matrikulasi Johor's annual innovation showcase. Competed against fellow students demonstrating originality and technical skill.</p>
+    <div class="mtags mt1"><span>Innovation</span><span>Creativity</span><span>Technical Skills</span></div>
+  </div>
+
+  <!-- ── CONTACT QUICK ── -->
+  <div id="m-contact">
+    <div class="mh"><div class="mhico"><i class="fas fa-envelope"></i></div><div><h2>Get In Touch</h2><p>Contact Information</p></div></div>
+    <ul class="minfo">
+      <li><span><i class="fas fa-envelope"></i> Email</span><span>angelineleepei@graduate.utm.my</span></li>
+      <li><span><i class="fas fa-phone"></i> Phone</span><span>+6017-501 7013</span></li>
+      <li><span><i class="fas fa-map-marker-alt"></i> Location</span><span>Johor Bahru, Johor, Malaysia</span></li>
+    </ul>
+    <p class="mt1">Scroll to the <a href="#contact" style="color:var(--p4);font-weight:600">Contact Section</a> to send a message.</p>
+  </div>
+
+</div><!-- /mtpls -->
+
+<script src="script.js"></script>
+</body>
+</html>
