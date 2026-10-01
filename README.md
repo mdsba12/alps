@@ -82,12 +82,6 @@ portfolio-website/
 - **Lazy Loading**: Content loads as you scroll
 - **Minimal Dependencies**: Only essential external resources
 
-## Contact Information
-
-- **Phone**: +6017-501 7013
-- **Email**: angelineleepei@graduate.utm.my
-- **Location**: Johor Bahru, Johor, Malaysia
-
 ## License
 
 This portfolio website is created for Angeline Lee Pei Shih. All rights reserved.
