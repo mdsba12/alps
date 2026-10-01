@@ -221,32 +221,7 @@
       });
     }
 
-    /* ── 5j. CONTACT FORM ──────────────────────────────── */
-    var form = document.getElementById('contactForm');
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (!form.fName.value.trim() || !form.lName.value.trim())
-          return showToast('Please enter your full name.', 'error');
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value))
-          return showToast('Please enter a valid email.', 'error');
-        if (!form.subject.value)
-          return showToast('Please select a subject.', 'error');
-        if (!form.message.value.trim())
-          return showToast('Please write a message.', 'error');
-
-        var btn = form.querySelector('.btn-submit');
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
-        setTimeout(function () {
-          showToast("Message sent! I'll reply within 24 hours.", 'success');
-          form.reset();
-          if (cc) cc.textContent = '0 / ' + MAX;
-          btn.disabled = false;
-          btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-        }, 1600);
-      });
-    }
+    /* ── CONTACT FORM REMOVED ────────────────────────── */
 
     /* ── 5k. FOOTER YEAR ───────────────────────────────── */
     var fy = document.getElementById('footCopy');
